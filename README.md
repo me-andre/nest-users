@@ -29,7 +29,15 @@
 ## Project setup
 
 ```bash
-$ npm install
+npm install
+cp .env.example .env 
+```
+
+## Database setup
+
+```bash
+docker pull mysql:latest
+docker run --name nest-users-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=nest_users -p 3306:3306 -d mysql:latest
 ```
 
 ## Compile and run the project
